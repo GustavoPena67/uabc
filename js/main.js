@@ -122,3 +122,100 @@
     form.querySelectorAll("[aria-invalid]").forEach(function (e) { e.removeAttribute("aria-invalid"); });
   });
 })();
+
+// ===== Animaciones extra: contadores, sellos, línea del tiempo y visor de fotos =====
+(function () {
+  "use strict";
+  var html = document.documentElement;
+  var reducido = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // 1) Las fechas de la portada cuentan hasta su año (una vez, al cargar)
+  if (!reducido) {
+    document.querySelectorAll("[data-contar]").forEach(function (el, i) {
+      var fin = +el.dataset.contar, inicio = fin - 60, t0 = 0, dur = 1300;
+      el.textContent = inicio;
+      setTimeout(function () {
+        function paso(t) {
+          if (!t0) t0 = t;
+          var u = Math.min(1, (t - t0) / dur);
+          var e = 1 - Math.pow(1 - u, 4);
+          el.textContent = Math.round(inicio + (fin - inicio) * e);
+          if (u < 1) requestAnimationFrame(paso);
+        }
+        requestAnimationFrame(paso);
+      }, 800 + i * 120);
+    });
+  }
+
+  // 2) El kanji de cada sección se "estampa" como un sello (hanko) la primera vez que aparece,
+  //    y la línea del tiempo se dibuja punto por punto.
+  if ("IntersectionObserver" in window && !reducido) {
+    html.classList.add("sello-listo");
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        e.target.classList.add(e.target.matches(".tabla--tiempo") ? "trazada" : "estampado");
+        obs.unobserve(e.target);
+      });
+    }, { rootMargin: "0px 0px -15% 0px" });
+    document.querySelectorAll(".seccion__encabezado, .tabla--tiempo").forEach(function (el) { obs.observe(el); });
+  }
+
+  // 3) Visor de fotos: la foto crece desde su miniatura (y regresa a ella al cerrar)
+  var visor = document.getElementById("visor");
+  if (!visor) return;
+  var vImg = visor.querySelector(".visor__img");
+  var vCred = visor.querySelector(".visor__credito");
+  var origen = null;
+
+  function delta(desde, hasta) {
+    return "translate(" + (desde.left - hasta.left) + "px," + (desde.top - hasta.top) + "px) scale(" +
+      (desde.width / hasta.width) + "," + (desde.height / hasta.height) + ")";
+  }
+
+  function abrir(boton) {
+    var img = boton.querySelector("img");
+    origen = boton;
+    vImg.src = img.currentSrc || img.src;
+    vImg.alt = img.alt;
+    vCred.textContent = boton.dataset.credito || "";
+    visor.hidden = false;
+    document.body.style.overflow = "hidden";
+    var listo = function () {
+      var a = img.getBoundingClientRect(), b = vImg.getBoundingClientRect();
+      if (!reducido) {
+        vImg.style.transition = "none";
+        vImg.style.transform = delta(a, b);
+        vImg.offsetWidth;
+        vImg.style.transition = "transform 420ms cubic-bezier(0.32, 0.72, 0, 1)";
+        vImg.style.transform = "none";
+      }
+      visor.classList.add("abierto");
+      visor.querySelector(".visor__cerrar").focus({ preventScroll: true });
+    };
+    if (vImg.complete && vImg.naturalWidth) listo(); else vImg.onload = listo;
+  }
+
+  function cerrar() {
+    if (visor.hidden) return;
+    visor.classList.remove("abierto");
+    var img = origen && origen.querySelector("img");
+    var fin = function () {
+      visor.hidden = true; vImg.style.transform = ""; vImg.style.transition = "";
+      document.body.style.overflow = "";
+      if (origen) origen.focus({ preventScroll: true });
+    };
+    if (img && !reducido) {
+      var a = img.getBoundingClientRect(), b = vImg.getBoundingClientRect();
+      vImg.style.transition = "transform 300ms cubic-bezier(0.32, 0.72, 0, 1)";
+      vImg.style.transform = delta(a, b);
+      setTimeout(fin, 300);
+    } else fin();
+  }
+
+  document.querySelectorAll(".foto-ampliable").forEach(function (b) {
+    b.addEventListener("click", function () { abrir(b); });
+  });
+  visor.querySelectorAll("[data-cerrar]").forEach(function (el) { el.addEventListener("click", cerrar); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") cerrar(); });
+})();

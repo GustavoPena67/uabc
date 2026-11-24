@@ -471,6 +471,118 @@ hr {
 .pie__marca span { color: var(--bermellon); margin-right: 8px; }
 .pie .boton--secundario { background: transparent; color: var(--algodon); border-color: #4a4766; margin-top: 12px; }
 
+
+/* ================= FOTOGRAFÍAS REALES ================= */
+/* Portada: foto de 1921 en duotono índigo/sepia, con acercamiento lento una sola vez */
+.portada__foto { position: absolute; inset: 0; overflow: hidden; }
+.portada__foto img {
+  width: 100%; height: 100%; object-fit: cover; object-position: 50% 35%;
+  filter: grayscale(1) sepia(.35) contrast(1.1) brightness(.8);
+  mix-blend-mode: luminosity; opacity: .38;
+  animation: acercar 3200ms var(--ease-enter) both;
+}
+.portada__foto::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, rgb(15 23 48 / .92) 0%, rgb(15 23 48 / .6) 45%, rgb(15 23 48 / .15) 100%),
+              linear-gradient(180deg, transparent 55%, rgb(184 88 74 / .5) 85%, rgb(240 162 59 / .6) 100%);
+}
+.portada__sol { mix-blend-mode: screen; }
+@keyframes acercar { from { transform: scale(1.14); opacity: 0; } to { transform: scale(1); opacity: .38; } }
+
+/* Botones-foto: se pueden ampliar */
+button.foto, button.tarjeta__retrato { appearance: none; border: 0; padding: 0; margin: 0; font: inherit; color: inherit; cursor: zoom-in; text-align: left; width: 100%; }
+.foto img { aspect-ratio: 3 / 2; object-fit: cover; height: auto; }
+
+/* Retrato de Enomoto: sello circular en la tarjeta */
+.tarjeta__retrato {
+  position: absolute !important; top: 22px; right: 22px; width: 72px !important; height: 72px;
+  border-radius: 50%; overflow: hidden; box-shadow: 0 0 0 3px var(--washi), 0 0 0 5px var(--agave);
+  transition: transform 220ms var(--ease-out);
+}
+.tarjeta__retrato img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; filter: sepia(.25); }
+@media (hover: hover) and (pointer: fine) { .tarjeta__retrato:hover { transform: scale(1.08) rotate(-3deg); } }
+
+/* Foto histórica que se revela (picture-develops) */
+.foto--historica { position: relative; margin-top: 56px; aspect-ratio: 16 / 8; border-radius: var(--r-lg); box-shadow: var(--sombra-hover); }
+.foto--historica img { aspect-ratio: auto; height: 100%; filter: sepia(.2); }
+.foto__sello {
+  position: absolute; z-index: 2; left: 20px; bottom: 20px;
+  padding: 8px 14px; border-radius: 999px; background: rgb(27 26 46 / .78); color: var(--algodon);
+  font: 600 .85rem/1 var(--font-text); letter-spacing: .06em; backdrop-filter: blur(6px);
+}
+
+/* Mosaico de cultura */
+.mosaico { display: grid; gap: 12px; grid-template-columns: 1.4fr 1fr; grid-template-rows: 1fr 1fr; aspect-ratio: 16 / 11; }
+.mosaico .foto { height: 100%; border-radius: 18px; }
+.mosaico .foto img { height: 100%; aspect-ratio: auto; }
+.mosaico__grande { grid-row: 1 / span 2; }
+
+/* Créditos */
+.creditos__titulo { margin-top: 48px; }
+.creditos { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px 32px; grid-template-columns: repeat(2, minmax(0, 1fr)); font-size: .88rem; color: var(--tinta-suave); }
+.creditos li { padding: 6px 0; border-bottom: 1px dashed var(--line); }
+
+/* ================= BANDA DE PALABRAS ================= */
+.banda { overflow: hidden; background: var(--sol); color: var(--indigo); padding: 18px 0; border-block: 3px solid var(--indigo); }
+.banda__pista { display: flex; width: max-content; animation: banda 40s linear infinite; }
+.banda span { font-family: var(--font-display); font-size: clamp(1.3rem, 2.6vw, 2rem); padding: 0 28px; white-space: nowrap; display: inline-flex; align-items: center; gap: 10px; }
+.banda span::after { content: "●"; font-size: .45em; color: var(--bermellon); margin-left: 28px; }
+.banda i { font-size: .7em; opacity: .75; }
+.banda:hover .banda__pista { animation-play-state: paused; }
+@keyframes banda { to { transform: translateX(-50%); } }
+
+/* ================= SELLO (hanko) del kanji de cada sección ================= */
+.sello-listo .seccion__kanji { opacity: 0; transform: translateY(-58%) scale(1.5) rotate(-8deg); transition: opacity 500ms ease, transform 700ms cubic-bezier(.34, 1.4, .64, 1); }
+.sello-listo .seccion__encabezado.estampado .seccion__kanji { opacity: .08; transform: translateY(-58%) scale(1) rotate(0); }
+.sello-listo .seccion--indigo .seccion__encabezado.estampado .seccion__kanji { opacity: .12; }
+.sello-listo .seccion--conclusion .seccion__encabezado.estampado .seccion__kanji { opacity: .1; }
+
+/* Línea del tiempo: la línea se dibuja y los puntos aparecen en cadena */
+.sello-listo .tabla--tiempo tbody td:first-child::before { transform: scaleY(0); transform-origin: top; transition: transform 300ms var(--ease-out); }
+.sello-listo .tabla--tiempo tbody td:first-child::after { transform: scale(0); transition: transform 380ms cubic-bezier(.34, 1.56, .64, 1); }
+.sello-listo .tabla--tiempo.trazada tbody td:first-child::before { transform: scaleY(1); }
+.sello-listo .tabla--tiempo.trazada tbody td:first-child::after { transform: scale(1); }
+.tabla--tiempo tbody tr:nth-child(1) td:first-child::before, .tabla--tiempo tbody tr:nth-child(1) td:first-child::after { transition-delay: 0ms; }
+.tabla--tiempo tbody tr:nth-child(2) td:first-child::before, .tabla--tiempo tbody tr:nth-child(2) td:first-child::after { transition-delay: 90ms; }
+.tabla--tiempo tbody tr:nth-child(3) td:first-child::before, .tabla--tiempo tbody tr:nth-child(3) td:first-child::after { transition-delay: 170ms; }
+.tabla--tiempo tbody tr:nth-child(4) td:first-child::before, .tabla--tiempo tbody tr:nth-child(4) td:first-child::after { transition-delay: 240ms; }
+.tabla--tiempo tbody tr:nth-child(5) td:first-child::before, .tabla--tiempo tbody tr:nth-child(5) td:first-child::after { transition-delay: 300ms; }
+.tabla--tiempo tbody tr:nth-child(6) td:first-child::before, .tabla--tiempo tbody tr:nth-child(6) td:first-child::after { transition-delay: 355ms; }
+.tabla--tiempo tbody tr:nth-child(7) td:first-child::before, .tabla--tiempo tbody tr:nth-child(7) td:first-child::after { transition-delay: 405ms; }
+.tabla--tiempo tbody tr:nth-child(8) td:first-child::before, .tabla--tiempo tbody tr:nth-child(8) td:first-child::after { transition-delay: 450ms; }
+.tabla--tiempo tbody tr:nth-child(9) td:first-child::before, .tabla--tiempo tbody tr:nth-child(9) td:first-child::after { transition-delay: 490ms; }
+.tabla--tiempo tbody tr:nth-child(10) td:first-child::before, .tabla--tiempo tbody tr:nth-child(10) td:first-child::after { transition-delay: 525ms; }
+
+/* ================= VISOR DE FOTOS ================= */
+.visor { position: fixed; inset: 0; z-index: 90; display: grid; place-items: center; padding: 24px; }
+.visor[hidden] { display: none; }
+.visor__fondo { position: absolute; inset: 0; background: rgb(10 14 30 / .88); backdrop-filter: blur(6px); opacity: 0; transition: opacity 300ms ease; }
+.visor.abierto .visor__fondo { opacity: 1; }
+.visor__marco { position: relative; margin: 0; max-width: min(1200px, 100%); display: grid; gap: 12px; justify-items: center; }
+.visor__img { max-width: 100%; max-height: 80vh; width: auto; height: auto; border-radius: 12px; box-shadow: 0 30px 80px rgb(0 0 0 / .5); transform-origin: top left; will-change: transform; }
+.visor__credito { color: #d8d2c6; font-size: .88rem; text-align: center; opacity: 0; transition: opacity 250ms ease 150ms; }
+.visor.abierto .visor__credito { opacity: 1; }
+.visor__cerrar {
+  position: absolute; top: 16px; right: 16px; width: 48px; height: 48px; border-radius: 50%;
+  border: 1px solid rgb(255 255 255 / .3); background: rgb(255 255 255 / .08); color: #fff; font-size: 1.1rem; cursor: pointer;
+  transition: transform var(--m-press) var(--ease-out), background-color 150ms ease;
+}
+.visor__cerrar:active { transform: scale(.94); }
+
+@media (max-width: 680px) {
+  .creditos { grid-template-columns: 1fr; }
+  .mosaico { aspect-ratio: 4 / 5; grid-template-columns: 1fr 1fr; grid-template-rows: 1.4fr 1fr; }
+  .mosaico__grande { grid-row: auto; grid-column: 1 / span 2; }
+  .foto--historica { aspect-ratio: 4 / 3; }
+  .tarjeta__retrato { width: 60px !important; height: 60px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .portada__foto img { animation: none; opacity: .38; }
+  .banda__pista { animation: none; }
+  .sello-listo .seccion__kanji, .sello-listo .tabla--tiempo tbody td:first-child::before, .sello-listo .tabla--tiempo tbody td:first-child::after { transition: none; }
+  .tarjeta__retrato:hover { transform: none; }
+}
+
 /* ================= RESPONSIVO ================= */
 @media (max-width: 900px) {
   .tres-columnas, .aportes { grid-template-columns: repeat(2, minmax(0, 1fr)); }

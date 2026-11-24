@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/estilos.css">
   <link rel="stylesheet" href="assets/moments/photo-chapters.css">
   <link rel="stylesheet" href="assets/moments/word-highlight.css">
+  <link rel="stylesheet" href="assets/moments/picture-develops.css">
 </head>
 <body>
 
@@ -22,6 +23,7 @@
   <!-- ===== Portada ===== -->
   <header class="portada" id="inicio">
     <div class="portada__cielo" aria-hidden="true">
+      <div class="portada__foto"><img src="img/fotos/hero-kobe-1921.jpg" alt="" width="1600" height="954" fetchpriority="high"></div>
       <div class="portada__sol"></div>
       <div class="portada__olas"></div>
       <span class="portada__kanji" lang="ja"><span>移</span><span>民</span></span>
@@ -42,9 +44,9 @@
         <a class="boton boton--fantasma" href="#linea-tiempo">Ver la línea del tiempo</a>
       </div>
       <div class="portada__datos" data-entrada="6">
-        <div><strong>1888</strong><span>Tratado México–Japón</span></div>
-        <div><strong>1897</strong><span>Primera colonia japonesa</span></div>
-        <div><strong>1903</strong><span>Se funda Mexicali</span></div>
+        <div><strong data-contar="1888">1888</strong><span>Tratado México–Japón</span></div>
+        <div><strong data-contar="1897">1897</strong><span>Primera colonia japonesa</span></div>
+        <div><strong data-contar="1903">1903</strong><span>Se funda Mexicali</span></div>
       </div>
     </div>
   </header>
@@ -133,6 +135,9 @@
             </p>
           </article>
           <article class="tarjeta">
+            <button type="button" class="tarjeta__retrato foto-ampliable" data-credito="Enomoto Takeaki (1836–1908). Autor desconocido, dominio público, Wikimedia Commons." aria-label="Ampliar retrato de Enomoto Takeaki">
+              <img src="img/fotos/enomoto.jpg" alt="Retrato de Enomoto Takeaki en sus últimos años" width="600" height="795" loading="lazy">
+            </button>
             <span class="tarjeta__fecha">1897</span>
             <h3>La Colonia Enomoto</h3>
             <p>
@@ -154,14 +159,14 @@
         </div>
         <ol class="mo-ph__list">
           <li class="mo-ph__ch">
-            <figure class="mo-ph__pic"><img src="img/puerto-salida.svg" alt="Amanecer en un puerto japonés con el monte Fuji y un barco de vapor zarpando" width="800" height="450"></figure>
+            <figure class="mo-ph__pic"><img src="img/fotos/cap1-yokohama.jpg" alt="Muelle del puerto de Yokohama a finales del siglo XIX, con barcos y almacenes" width="1600" height="1370"></figure>
             <h3>Salida desde Yokohama o Kobe</h3>
             <p>Con un contrato de trabajo y poco equipaje, los emigrantes dejaban los puertos de Japón.</p>
           </li>
           <li class="mo-ph__ch">
-            <figure class="mo-ph__pic"><img src="img/travesia.svg" alt="Barco de vapor cruzando el océano Pacífico de noche entre grandes olas" width="800" height="450"></figure>
+            <figure class="mo-ph__pic"><img src="img/fotos/cap2-kasato-maru.jpg" alt="El Kasato Maru, barco de vapor que llevó emigrantes japoneses a América en 1908" width="1600" height="888"></figure>
             <h3>Semanas en el Pacífico</h3>
-            <p>La travesía en barco de vapor duraba varias semanas hasta la costa de América.</p>
+            <p>En barcos de vapor como el <i>Kasato Maru</i> (1908), la travesía duraba varias semanas.</p>
           </li>
           <li class="mo-ph__ch">
             <figure class="mo-ph__pic"><img src="img/ruta-pacifico.svg" alt="Mapa ilustrado de la ruta desde Japón hasta Chiapas y después hacia Mexicali" width="800" height="450"></figure>
@@ -169,9 +174,9 @@
             <p>Desembarcaban en Salina Cruz o Manzanillo y trabajaban en minas, ingenios o el ferrocarril.</p>
           </li>
           <li class="mo-ph__ch">
-            <figure class="mo-ph__pic"><img src="img/valle-algodon.svg" alt="Campos de algodón del Valle de Mexicali con la Sierra Cucapá al fondo" width="800" height="450"></figure>
+            <figure class="mo-ph__pic"><img src="img/fotos/cap4-mexicali-iss.jpg" alt="Mexicali y los campos de cultivo del valle vistos desde la Estación Espacial Internacional en 2024" width="1600" height="1067"></figure>
             <h3>Rumbo al Valle de Mexicali</h3>
-            <p>Por Sonora o desde California, llegaban al valle algodonero en la frontera norte.</p>
+            <p>Por Sonora o desde California llegaban al valle que hoy se ve así desde el espacio.</p>
           </li>
         </ol>
       </div>
@@ -204,6 +209,10 @@
             </p>
           </div>
         </div>
+        <button type="button" class="foto foto--historica foto-ampliable" data-moment="picture-develops" data-moment-opts='{"look":"film"}' data-credito="Cervecería Mexicali, años 20. Autor desconocido, dominio público, Wikimedia Commons." aria-label="Ampliar foto de la Cervecería Mexicali en los años veinte">
+          <img src="img/fotos/mexicali-1920s.jpg" alt="Edificio de la Cervecería Mexicali en la década de 1920" width="960" height="707" loading="lazy">
+          <span class="foto__sello">Mexicali · 1920s</span>
+        </button>
       </div>
     </section>
 
@@ -225,9 +234,9 @@
               prosperar. También se dedicaron al comercio, a los servicios y a la producción de hortalizas para la ciudad.
             </p>
           </div>
-          <a class="foto m-zoom" href="#cultura" aria-label="Ir a la sección de influencia cultural">
-            <img src="img/comunidad.svg" alt="Calle de Mexicali con una tienda de abarrotes que tiene una cortina noren japonesa" width="800" height="450" loading="lazy">
-          </a>
+          <button type="button" class="foto m-zoom foto-ampliable" data-credito="Algodón en flor y en capullo. Alabama Extension, CC0, Wikimedia Commons." aria-label="Ampliar foto de una planta de algodón">
+            <img src="img/fotos/algodon.jpg" alt="Capullo abierto de algodón junto a una flor en el campo" width="1600" height="1067" loading="lazy">
+          </button>
         </div>
 
         <h3>Actividades económicas</h3>
@@ -264,6 +273,13 @@
       </div>
     </section>
 
+    <div class="banda" aria-hidden="true">
+      <div class="banda__pista">
+        <span>移民 <i>imin</i></span><span>Mexicali</span><span>一世 <i>issei</i></span><span>algodón</span><span>二世 <i>nisei</i></span><span>río Colorado</span><span>日系 <i>nikkei</i></span><span>Valle de Mexicali</span><span>我慢 <i>gaman</i></span><span>frontera</span>
+        <span>移民 <i>imin</i></span><span>Mexicali</span><span>一世 <i>issei</i></span><span>algodón</span><span>二世 <i>nisei</i></span><span>río Colorado</span><span>日系 <i>nikkei</i></span><span>Valle de Mexicali</span><span>我慢 <i>gaman</i></span><span>frontera</span>
+      </div>
+    </div>
+
     <!-- 6. Influencia cultural -->
     <section class="seccion" id="cultura">
       <div class="seccion__interior">
@@ -273,8 +289,16 @@
           <h2>Influencia cultural</h2>
         </div>
         <div class="dividido dividido--invertido">
-          <div class="foto foto--quieta">
-            <img src="img/cultura-nikkei.svg" alt="Faroles japoneses de papel junto a papel picado mexicano" width="800" height="450" loading="lazy">
+          <div class="mosaico">
+            <button type="button" class="foto m-zoom foto-ampliable mosaico__grande" data-credito="Bon Odori en Umekita, Osaka, 2024. Mr.ちゅらさん, CC0, Wikimedia Commons." aria-label="Ampliar foto de un baile Bon Odori">
+              <img src="img/fotos/bon-odori.jpg" alt="Personas bailando Bon Odori de noche alrededor de una torre con faroles" width="1600" height="1200" loading="lazy">
+            </button>
+            <button type="button" class="foto m-zoom foto-ampliable" data-credito="Festival de taiko en Takanosu, Japón. Marho, CC BY-SA 4.0, Wikimedia Commons." aria-label="Ampliar foto de tambores taiko">
+              <img src="img/fotos/taiko.jpg" alt="Grandes tambores taiko en un festival" width="1600" height="1067" loading="lazy">
+            </button>
+            <button type="button" class="foto m-zoom foto-ampliable" data-credito="Cacahuates japoneses. Meowmeow10, CC BY-SA 3.0, Wikimedia Commons." aria-label="Ampliar foto de cacahuates japoneses">
+              <img src="img/fotos/cacahuates.jpg" alt="Cacahuates japoneses, cubiertos de harina crujiente" width="1241" height="695" loading="lazy">
+            </button>
           </div>
           <p>
             La cultura japonesa se mezcló con la mexicana y con la vida fronteriza de Mexicali. Las familias <i>nikkei</i>
@@ -490,6 +514,19 @@
             </ul>
           </div>
         </div>
+        <h3 class="creditos__titulo">Fotografías</h3>
+        <ul class="creditos" id="creditos-fotos">
+          <li>Emigrantes japoneses embarcando en el puerto de Kobe, 1921 (portada) — Autor desconocido. <a class="enlace" href="https://commons.wikimedia.org/wiki/File:Japanese_emigrants_embark_for_Brazil_at_Kobe_Port,_Trans-Pacific_Vol_4_Issue_1_-_Jan_1921_pg_90.jpg" target="_blank" rel="noopener noreferrer">Dominio público</a></li>
+          <li>Muelle de Yokohama, c. 1880–1890 — Kusakabe Kimbei · New York Public Library. <a class="enlace" href="https://commons.wikimedia.org/wiki/File:View_of_English_Hatoba_at_Yokohama_(3110703162).jpg" target="_blank" rel="noopener noreferrer">Sin restricciones</a></li>
+          <li>Barco Kasato Maru, 1908 — Autor desconocido. <a class="enlace" href="https://commons.wikimedia.org/wiki/File:Kasato_Maru_ship_(cruise_line_to_Brazil).png" target="_blank" rel="noopener noreferrer">Dominio público</a></li>
+          <li>Mexicali desde la Estación Espacial Internacional, 2024 (NASA) — NASA (fotografía de astronauta ISS071). <a class="enlace" href="https://commons.wikimedia.org/wiki/File:Mexicali,_Baja_California_(153234).jpg" target="_blank" rel="noopener noreferrer">Dominio público</a></li>
+          <li>Retrato de Enomoto Takeaki — Autor desconocido. <a class="enlace" href="https://commons.wikimedia.org/wiki/File:Enomoto_Takeaki.jpg" target="_blank" rel="noopener noreferrer">Dominio público</a></li>
+          <li>Cervecería Mexicali, años 20 — Autor desconocido. <a class="enlace" href="https://commons.wikimedia.org/wiki/File:Cervecer%C3%ADa_Mexicali,_1920%27s.jpg" target="_blank" rel="noopener noreferrer">Dominio público</a></li>
+          <li>Algodón en el campo — Alabama Extension. <a class="enlace" href="https://commons.wikimedia.org/wiki/File:COTTON_BOLL_AND_BLOOM_close_up_(49168276928).jpg" target="_blank" rel="noopener noreferrer">CC0</a></li>
+          <li>Bon Odori en Osaka, 2024 — Mr.ちゅらさん. <a class="enlace" href="https://commons.wikimedia.org/wiki/File:2024_Umekita_Bon_Odori_Dance_Fes10.jpg" target="_blank" rel="noopener noreferrer">CC0</a></li>
+          <li>Festival de taiko en Takanosu — Marho. <a class="enlace" href="https://commons.wikimedia.org/wiki/File:Taiko_Festival_Takanosu.jpg" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a></li>
+          <li>Cacahuates japoneses — Meowmeow10. <a class="enlace" href="https://commons.wikimedia.org/wiki/File:Cacahuates_Japoneses.jpg" target="_blank" rel="noopener noreferrer">CC BY-SA 3.0</a></li>
+        </ul>
       </div>
     </section>
 
@@ -499,12 +536,21 @@
     <div class="pie__interior">
       <p class="pie__marca"><span lang="ja">日墨</span> Japón · México</p>
       <p>Meta 4.3 · HTML 2 · Universidad Autónoma de Baja California<br>
-      Ilustraciones originales del proyecto. Animaciones con <a class="enlace" href="https://github.com/emilkowalski/skills" target="_blank" rel="noopener noreferrer">emilkowalski/skills</a> y <a class="enlace" href="https://github.com/Leonxlnx/taste-skill" target="_blank" rel="noopener noreferrer">taste-skill</a>.</p>
+      Fotografías de Wikimedia Commons (ver créditos en Referencias); mapa ilustrado original. Animaciones con <a class="enlace" href="https://github.com/emilkowalski/skills" target="_blank" rel="noopener noreferrer">emilkowalski/skills</a> y <a class="enlace" href="https://github.com/Leonxlnx/taste-skill" target="_blank" rel="noopener noreferrer">taste-skill</a>.</p>
       <a class="boton boton--secundario boton--chico" href="#inicio">↑ Volver arriba</a>
     </div>
   </footer>
 
   <div class="avisos" id="avisos" aria-live="polite"></div>
+
+  <div class="visor" id="visor" hidden>
+    <div class="visor__fondo" data-cerrar></div>
+    <figure class="visor__marco">
+      <img class="visor__img" src="" alt="">
+      <figcaption class="visor__credito"></figcaption>
+    </figure>
+    <button type="button" class="visor__cerrar" data-cerrar aria-label="Cerrar foto">✕</button>
+  </div>
 
   <script src="js/main.js"></script>
   <script src="assets/moments/momentos.js"></script>
