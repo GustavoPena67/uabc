@@ -4,6 +4,8 @@ Proyecto **Meta 4.3 · HTML 2** (UABC). Página web informativa sobre la migraci
 
 Abre `index.html` en el navegador para verla.
 
+**Para entregar:** `entrega/migracion-japonesa-mexicali.html` es un solo archivo con todo dentro (estilos, scripts y fotos). Se puede subir o enviar tal cual.
+
 ## Estructura
 
 ```
@@ -11,7 +13,8 @@ index.html        Página principal
 css/estilos.css   Estilos
 js/main.js        Interacciones (índice activo, filtros, formulario, avisos)
 assets/moments/   Animaciones al hacer scroll (del skill taste-skill)
-img/              Ilustraciones (SVG)
+img/fotos/        Fotografías reales (Wikimedia Commons)
+img/              Mapa ilustrado (SVG)
 ```
 
 ## Requisitos cubiertos
@@ -26,7 +29,7 @@ img/              Ilustraciones (SVG)
 | Lista ordenada `<ol>` y desordenada `<ul>` | *El viaje* (4 capítulos) y *Aportaciones culturales* |
 | Índice con hipervínculos internos | Barra de navegación fija (`href="#seccion"`) |
 | Al menos 3 enlaces externos | Sección *Referencias* (5 enlaces) |
-| Al menos 3 imágenes `<img>` | 6 ilustraciones en `img/` (puerto, travesía, mapa, valle, comercio, cultura) |
+| Al menos 3 imágenes `<img>` | 10 fotografías reales + 1 mapa ilustrado |
 | `<div>` para agrupar | Contenedores de portada, tablas, campos del formulario |
 | Tabla con mínimo 10 celdas | *Actividades económicas* (15 celdas) y *Línea del tiempo* (31 celdas, con `thead`, `tbody`, `tfoot`, `caption`, `colspan`) |
 | Botones | Filtros de la línea del tiempo (con pastilla deslizante) y botones `submit` / `reset` |
@@ -57,7 +60,16 @@ Con el skill [taste-skill](https://github.com/Leonxlnx/taste-skill) (instalado e
 - Sin animaciones de aparición en cada sección (el skill las prohíbe por verse genéricas).
 - Los momentos se empaquetaron en `assets/moments/momentos.js` como script normal, para que la página funcione abriendo `index.html` directo, sin servidor.
 
+## Animaciones nuevas
+
+- Portada con una foto de 1921 en duotono que se acerca lentamente, y fechas que cuentan hasta su año.
+- Momento **picture-develops**: la foto de Mexicali en los años 20 se revela como en un cuarto oscuro.
+- El kanji de cada sección se estampa como un sello japonés (*hanko*) la primera vez que aparece.
+- La línea del tiempo se dibuja punto por punto.
+- Una banda de palabras (*issei*, *nisei*, algodón, Mexicali…) se desliza entre secciones y se pausa al pasar el mouse.
+- Visor de fotos: al dar clic, la foto crece desde su miniatura y muestra su crédito; se cierra con Esc.
+
 ## Notas para la entrega
 
-- Las imágenes son ilustraciones propias en SVG. Si el profesor pide fotografías históricas reales, reemplaza los archivos de `img/` (o cambia el `src`) y conserva el texto `alt`.
+- Las fotografías son de Wikimedia Commons (dominio público, CC0 o CC BY/BY-SA); los créditos están en la sección *Referencias*. Algunas son representativas de la época (el Kasato Maru llevó emigrantes a Brasil; la foto de Kobe de 1921 también).
 - Revisa los enlaces externos antes de entregar y agrega tu nombre y matrícula en el pie de página.

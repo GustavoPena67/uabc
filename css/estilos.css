@@ -516,6 +516,7 @@ button.foto, button.tarjeta__retrato { appearance: none; border: 0; padding: 0; 
 .mosaico .foto { height: 100%; border-radius: 18px; }
 .mosaico .foto img { height: 100%; aspect-ratio: auto; }
 .mosaico__grande { grid-row: 1 / span 2; }
+.mosaico__grande img { object-position: 22% 50%; }
 
 /* Créditos */
 .creditos__titulo { margin-top: 48px; }
