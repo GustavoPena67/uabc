@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t d">
+<title id="t">Ruta de la migración japonesa a México</title>
+<desc id="d">Mapa ilustrado del océano Pacífico con una ruta punteada que sale de Japón, llega a Chiapas en 1897 y sube hasta Mexicali, Baja California.</desc>
+<defs><pattern id="w" width="24" height="12" patternUnits="userSpaceOnUse"><path d="M0 6 q6 -6 12 0 t12 0" fill="none" stroke="#9fb6c3" stroke-width="1.2"/></pattern></defs>
+<rect width="800" height="450" fill="#dfe8ec"/>
+<rect width="800" height="450" fill="url(#w)" opacity=".55"/>
+<path d="M40 70 q30 -20 45 10 q10 30 -10 60 q-15 30 -40 25 q-20 -10 -10 -45z M70 160 q15 5 10 25 q-10 15 -25 5z" fill="#c9b99a" stroke="#6b5d45" stroke-width="2"/>
+<path d="M560 40 L760 40 L780 120 L740 170 L700 190 L690 240 L720 300 L760 330 L770 380 L700 400 L660 360 L620 330 L600 280 L585 220 L560 170 L540 110z" fill="#e3cfa6" stroke="#6b5d45" stroke-width="2"/>
+<path d="M560 120 L572 170 L590 230 L600 260 L590 262 L575 220 L560 175 L552 130z" fill="#e3cfa6" stroke="#6b5d45" stroke-width="2"/>
+<path d="M70 110 C 250 -10, 520 40, 700 370" fill="none" stroke="#b33a2b" stroke-width="3" stroke-dasharray="8 8"/>
+<path d="M700 370 C 660 300, 610 210, 580 125" fill="none" stroke="#b33a2b" stroke-width="3" stroke-dasharray="3 7"/>
+<circle cx="70" cy="110" r="9" fill="#b33a2b"/><circle cx="700" cy="370" r="9" fill="#b33a2b"/><circle cx="580" cy="125" r="11" fill="#fff" stroke="#b33a2b" stroke-width="4"/>
+<g transform="translate(330 70)"><path d="M-30 0 h60 l-10 14 h-40z" fill="#3b3128"/><rect x="-3" y="-34" width="4" height="34" fill="#3b3128"/><path d="M1 -32 l22 22 h-22z" fill="#f4efe6" stroke="#3b3128"/></g>
+<g font-family="Georgia, serif" fill="#2a2420">
+<text x="40" y="205" font-size="22" font-weight="bold">JAPÓN</text>
+<text x="600" y="115" font-size="20" font-weight="bold">Mexicali</text>
+<text x="600" y="137" font-size="14">Baja California · 1910–1930</text>
+<text x="580" y="425" font-size="16" font-weight="bold">Chiapas · 1897</text>
+<text x="250" y="250" font-size="26" font-style="italic" opacity=".6">Océano Pacífico</text>
+<text x="400" y="440" font-size="12" text-anchor="middle" opacity=".7">Ilustración esquemática, no a escala</text>
+</g></svg>

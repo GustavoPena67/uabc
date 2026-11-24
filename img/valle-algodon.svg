@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-labelledby="t d">
+<title id="t">Campos de algodón en el Valle de Mexicali</title>
+<desc id="d">Ilustración de surcos de algodón bajo el sol del desierto, con la Sierra Cucapá al fondo y un canal de riego.</desc>
+<defs><linearGradient id="s" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6d9a8"/><stop offset="1" stop-color="#f3ebdc"/></linearGradient></defs>
+<rect width="800" height="450" fill="url(#s)"/>
+<circle cx="610" cy="110" r="52" fill="#e8873a"/>
+<path d="M0 230 L90 160 L150 200 L230 130 L320 210 L400 170 L470 220 L560 180 L650 225 L740 185 L800 215 V260 H0z" fill="#b98e6a"/>
+<path d="M0 250 L120 205 L220 240 L330 200 L460 245 L600 215 L800 248 V270 H0z" fill="#9b7356"/>
+<rect y="262" width="800" height="188" fill="#7d8a4a"/>
+<path d="M0 300 C 250 290, 500 320, 800 300 V312 C 500 332, 250 302, 0 312z" fill="#5d93a8"/>
+<g stroke="#5d6a32" stroke-width="3">
+<line x1="0" y1="340" x2="800" y2="330"/><line x1="0" y1="370" x2="800" y2="362"/><line x1="0" y1="402" x2="800" y2="396"/><line x1="0" y1="436" x2="800" y2="432"/></g>
+<g fill="#fffaf0">
+<circle cx="40" cy="333" r="6"/><circle cx="110" cy="331" r="5"/><circle cx="190" cy="334" r="6"/><circle cx="280" cy="330" r="5"/><circle cx="360" cy="332" r="6"/><circle cx="450" cy="329" r="5"/><circle cx="540" cy="331" r="6"/><circle cx="630" cy="327" r="5"/><circle cx="720" cy="329" r="6"/>
+<circle cx="70" cy="364" r="7"/><circle cx="160" cy="362" r="6"/><circle cx="250" cy="365" r="7"/><circle cx="340" cy="360" r="6"/><circle cx="430" cy="363" r="7"/><circle cx="520" cy="359" r="6"/><circle cx="610" cy="362" r="7"/><circle cx="700" cy="358" r="6"/>
+<circle cx="30" cy="396" r="8"/><circle cx="130" cy="398" r="7"/><circle cx="230" cy="395" r="8"/><circle cx="330" cy="397" r="7"/><circle cx="430" cy="394" r="8"/><circle cx="530" cy="396" r="7"/><circle cx="630" cy="393" r="8"/><circle cx="740" cy="395" r="7"/>
+<circle cx="80" cy="431" r="9"/><circle cx="200" cy="433" r="8"/><circle cx="320" cy="430" r="9"/><circle cx="440" cy="432" r="8"/><circle cx="560" cy="429" r="9"/><circle cx="680" cy="431" r="8"/></g>
+<g transform="translate(300 300)" fill="#2a2420"><circle cx="0" cy="-30" r="8"/><path d="M-18 -26 h36 l-18 -12z" fill="#c9a35e"/><rect x="-7" y="-22" width="14" height="30" rx="4"/><rect x="-6" y="8" width="4" height="20"/><rect x="2" y="8" width="4" height="20"/><path d="M6 -10 l22 18 l-4 4 l-20 -14z" fill="#e8e1d0"/></g>
+<text x="20" y="40" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#2a2420">Valle de Mexicali</text>
+<text x="20" y="64" font-family="Georgia, serif" font-size="15" fill="#2a2420">Algodón y canales de riego del río Colorado</text>
+</svg>
