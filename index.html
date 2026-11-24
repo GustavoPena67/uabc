@@ -3,27 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Historia de la migración japonesa a Mexicali, Baja California: antecedentes, llegada, comunidad, cultura y legado.">
+  <meta name="description" content="Historia de la migración japonesa a Mexicali, Baja California: del tratado de 1888 al auge algodonero del valle y la herencia nikkei de hoy.">
   <meta name="author" content="Alumno UABC">
+  <meta name="theme-color" content="#16213f">
   <title>Historia de la migración japonesa a Mexicali</title>
+  <script>document.documentElement.classList.add('mo-js');setTimeout(function(){document.documentElement.classList.add('mo-safe')},2500)</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400&family=Hanken+Grotesk:wght@400..700&family=Noto+Serif+JP:wght@500;700&display=swap">
   <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="assets/moments/photo-chapters.css">
+  <link rel="stylesheet" href="assets/moments/word-highlight.css">
 </head>
 <body>
 
   <a class="saltar" href="#contenido">Saltar al contenido</a>
 
-  <!-- ===== Encabezado principal ===== -->
+  <!-- ===== Portada ===== -->
   <header class="portada" id="inicio">
+    <div class="portada__cielo" aria-hidden="true">
+      <div class="portada__sol"></div>
+      <div class="portada__olas"></div>
+      <span class="portada__kanji" lang="ja"><span>移</span><span>民</span></span>
+    </div>
     <div class="portada__interior">
-      <p class="sello" data-entrada="1">移民 · <i>imin</i> · migración</p>
-      <h1 data-entrada="2">Historia de la migración japonesa a Mexicali</h1>
-      <p class="portada__bajada" data-entrada="3">
+      <p class="sello" data-entrada="0"><span lang="ja">移民</span> · <i>imin</i> · migración</p>
+      <h1>
+        <span class="linea"><span data-entrada="1">Historia de la</span></span>
+        <span class="linea"><span data-entrada="2">migración japonesa</span></span>
+        <span class="linea"><span data-entrada="3">a <em>Mexicali</em></span></span>
+      </h1>
+      <p class="portada__bajada" data-entrada="4">
         Del otro lado del Pacífico al desierto de Baja California:<br>
-        la historia de las familias <i>issei</i> y <i>nisei</i> que ayudaron a construir el Valle de Mexicali.
+        las familias <i>issei</i> y <i>nisei</i> que ayudaron a levantar el Valle de Mexicali.
       </p>
-      <div class="portada__acciones" data-entrada="4">
-        <a class="boton boton--primario" href="#introduccion">Comenzar a leer</a>
-        <a class="boton boton--secundario" href="#linea-tiempo">Ver línea del tiempo</a>
+      <div class="portada__acciones" data-entrada="5">
+        <a class="boton boton--primario" href="#introduccion">Leer la historia <svg class="flecha" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h9M8.5 4.5 12 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <a class="boton boton--fantasma" href="#linea-tiempo">Ver la línea del tiempo</a>
+      </div>
+      <div class="portada__datos" data-entrada="6">
+        <div><strong>1888</strong><span>Tratado México–Japón</span></div>
+        <div><strong>1897</strong><span>Primera colonia japonesa</span></div>
+        <div><strong>1903</strong><span>Se funda Mexicali</span></div>
       </div>
     </div>
   </header>
@@ -31,13 +52,14 @@
   <!-- ===== Índice de navegación (hipervínculos internos) ===== -->
   <nav class="indice" aria-label="Índice de navegación">
     <div class="indice__interior">
-      <h2 class="indice__titulo">Índice</h2>
+      <a class="indice__marca" href="#inicio"><span lang="ja">日墨</span></a>
       <ol class="indice__lista">
         <li><a href="#introduccion">Introducción</a></li>
-        <li><a href="#antecedentes">Antecedentes históricos</a></li>
+        <li><a href="#antecedentes">Antecedentes</a></li>
+        <li><a href="#viaje">El viaje</a></li>
         <li><a href="#llegada">Llegada a Mexicali</a></li>
-        <li><a href="#comunidad">Desarrollo de la comunidad</a></li>
-        <li><a href="#cultura">Influencia cultural</a></li>
+        <li><a href="#comunidad">Comunidad</a></li>
+        <li><a href="#cultura">Cultura</a></li>
         <li><a href="#actualidad">Actualidad</a></li>
         <li><a href="#linea-tiempo">Línea del tiempo</a></li>
         <li><a href="#conclusion">Conclusión</a></li>
@@ -51,423 +73,440 @@
 
     <!-- 1. Introducción -->
     <section class="seccion" id="introduccion">
-      <div class="seccion__encabezado">
-        <span class="seccion__numero">01</span>
-        <h2>Introducción</h2>
-      </div>
-      <p>
-        La <b>migración japonesa a México</b> es una de las más antiguas de América Latina. Comenzó formalmente a
-        finales del siglo XIX, cuando ambos países firmaron un tratado de amistad y comercio, y continuó durante las
-        primeras décadas del siglo XX con miles de trabajadores que llegaron a minas, ferrocarriles y campos agrícolas.
-      </p>
-      <p>
-        Muchos de esos inmigrantes se movieron hacia el norte del país. En <u>Baja California</u>, y en particular en el
-        <b>Valle de Mexicali</b>, encontraron trabajo en la agricultura de riego, sobre todo en el cultivo de algodón.
-        Con el tiempo formaron familias, abrieron negocios y dejaron una huella que todavía se reconoce en la ciudad.
-      </p>
-      <div class="cita">
-        <p>A los japoneses nacidos en Japón que emigraron se les llama <i>issei</i> (primera generación); a sus hijos
-        nacidos en México, <i>nisei</i>; y a toda la comunidad de origen japonés fuera de Japón, <i>nikkei</i>.</p>
+      <div class="seccion__interior">
+        <div class="seccion__encabezado">
+          <span class="seccion__kanji" lang="ja" aria-hidden="true">一</span>
+          <span class="seccion__numero">01</span>
+          <h2>Introducción</h2>
+        </div>
+        <div class="dos-columnas">
+          <div>
+            <p class="entrada">
+              La <b>migración japonesa a México</b> es una de las más antiguas de América Latina. Comenzó formalmente a
+              finales del siglo XIX, cuando ambos países firmaron un tratado de amistad y comercio.
+            </p>
+            <p>
+              Continuó durante las primeras décadas del siglo XX con miles de trabajadores que llegaron a minas,
+              ferrocarriles y campos agrícolas. Muchos se movieron después hacia el norte. En <u>Baja California</u>, y en
+              particular en el <b>Valle de Mexicali</b>, encontraron trabajo en la agricultura de riego, sobre todo en el
+              cultivo de algodón. Formaron familias, abrieron negocios y dejaron una huella que todavía se reconoce en la ciudad.
+            </p>
+          </div>
+          <div class="glosario">
+            <h3>Tres palabras para empezar</h3>
+            <dl>
+              <div><dt><i>Issei</i></dt><dd>Primera generación: nacidos en Japón que emigraron.</dd></div>
+              <div><dt><i>Nisei</i></dt><dd>Segunda generación: sus hijos, nacidos en México.</dd></div>
+              <div><dt><i>Nikkei</i></dt><dd>Toda la comunidad de origen japonés fuera de Japón.</dd></div>
+            </dl>
+          </div>
+        </div>
       </div>
     </section>
 
     <hr>
 
     <!-- 2. Antecedentes -->
-    <section class="seccion" id="antecedentes">
-      <div class="seccion__encabezado">
-        <span class="seccion__numero">02</span>
-        <h2>Antecedentes históricos</h2>
+    <section class="seccion seccion--papel" id="antecedentes">
+      <div class="seccion__interior">
+        <div class="seccion__encabezado">
+          <span class="seccion__kanji" lang="ja" aria-hidden="true">二</span>
+          <span class="seccion__numero">02</span>
+          <h2>Antecedentes históricos</h2>
+        </div>
+        <div class="tres-columnas">
+          <article class="tarjeta">
+            <span class="tarjeta__fecha">1868</span>
+            <h3>Japón en la era Meiji</h3>
+            <p>
+              Con la <i>Restauración Meiji</i>, a partir de <strong>1868</strong>, Japón se abrió al mundo y se modernizó.
+              Los altos impuestos sobre la tierra y la pobreza en el campo empujaron a muchos campesinos de Kumamoto,
+              Fukuoka, Hiroshima y Okinawa a buscar trabajo en el extranjero.
+            </p>
+          </article>
+          <article class="tarjeta">
+            <span class="tarjeta__fecha">1888</span>
+            <h3>El tratado con México</h3>
+            <p>
+              El <strong>30 de noviembre de 1888</strong> México y Japón firmaron el <b>Tratado de Amistad, Comercio y
+              Navegación</b>, el primero que Japón firmó en condiciones de igualdad con un país de Occidente.
+            </p>
+          </article>
+          <article class="tarjeta">
+            <span class="tarjeta__fecha">1897</span>
+            <h3>La Colonia Enomoto</h3>
+            <p>
+              En <strong>1897</strong> llegó a Chiapas la <u>Colonia Enomoto</u>, primer asentamiento japonés organizado
+              en América Latina. Entre <strong>1900 y 1910</strong> llegaron miles de trabajadores por contrato a minas,
+              ingenios y vías del ferrocarril.
+            </p>
+          </article>
+        </div>
       </div>
-      <h3>Japón en la era Meiji</h3>
-      <p>
-        A partir de <strong>1868</strong>, con la <i>Restauración Meiji</i>, Japón se abrió al mundo y se modernizó
-        rápidamente. Sin embargo, los altos impuestos sobre la tierra y la pobreza en el campo empujaron a muchos
-        campesinos, sobre todo de prefecturas del sur como Kumamoto, Fukuoka, Hiroshima y Okinawa, a buscar trabajo en
-        el extranjero.
-      </p>
-      <h3>El tratado con México</h3>
-      <p>
-        El <strong>30 de noviembre de 1888</strong> México y Japón firmaron el <b>Tratado de Amistad, Comercio y
-        Navegación</b>. Para Japón fue muy importante, porque fue el primer tratado en condiciones de igualdad que
-        firmó con un país de Occidente. Este acuerdo abrió la puerta a la llegada de colonos japoneses.
-      </p>
-      <h3>La Colonia Enomoto y los trabajadores por contrato</h3>
-      <p>
-        En <strong>1897</strong> llegó a Chiapas un grupo de colonos impulsado por el político Enomoto Takeaki, conocido
-        como la <u>Colonia Enomoto</u>, considerado el primer asentamiento japonés organizado en América Latina.
-        Entre <strong>1900 y 1910</strong> llegaron miles de trabajadores contratados por compañías de emigración para
-        trabajar en minas de carbón de Coahuila, minas de cobre de Sonora, ingenios azucareros y la construcción de
-        vías del ferrocarril.
-      </p>
     </section>
 
-    <hr>
+    <!-- 3. El viaje: momento "photo-chapters" (lista ordenada de rutas de llegada) -->
+    <section class="seccion seccion--viaje" id="viaje" data-moment="photo-chapters">
+      <div class="mo-ph">
+        <div class="mo-ph__head">
+          <h2>El viaje, en cuatro capítulos</h2>
+          <p>De un puerto japonés al Valle de Mexicali: el recorrido típico de los inmigrantes, paso a paso.</p>
+        </div>
+        <ol class="mo-ph__list">
+          <li class="mo-ph__ch">
+            <figure class="mo-ph__pic"><img src="img/puerto-salida.svg" alt="Amanecer en un puerto japonés con el monte Fuji y un barco de vapor zarpando" width="800" height="450"></figure>
+            <h3>Salida desde Yokohama o Kobe</h3>
+            <p>Con un contrato de trabajo y poco equipaje, los emigrantes dejaban los puertos de Japón.</p>
+          </li>
+          <li class="mo-ph__ch">
+            <figure class="mo-ph__pic"><img src="img/travesia.svg" alt="Barco de vapor cruzando el océano Pacífico de noche entre grandes olas" width="800" height="450"></figure>
+            <h3>Semanas en el Pacífico</h3>
+            <p>La travesía en barco de vapor duraba varias semanas hasta la costa de América.</p>
+          </li>
+          <li class="mo-ph__ch">
+            <figure class="mo-ph__pic"><img src="img/ruta-pacifico.svg" alt="Mapa ilustrado de la ruta desde Japón hasta Chiapas y después hacia Mexicali" width="800" height="450"></figure>
+            <h3>Puertos de México</h3>
+            <p>Desembarcaban en Salina Cruz o Manzanillo y trabajaban en minas, ingenios o el ferrocarril.</p>
+          </li>
+          <li class="mo-ph__ch">
+            <figure class="mo-ph__pic"><img src="img/valle-algodon.svg" alt="Campos de algodón del Valle de Mexicali con la Sierra Cucapá al fondo" width="800" height="450"></figure>
+            <h3>Rumbo al Valle de Mexicali</h3>
+            <p>Por Sonora o desde California, llegaban al valle algodonero en la frontera norte.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
 
-    <!-- 3. Llegada a Mexicali -->
+    <!-- 4. Llegada a Mexicali -->
     <section class="seccion" id="llegada">
-      <div class="seccion__encabezado">
-        <span class="seccion__numero">03</span>
-        <h2>Llegada a Mexicali</h2>
+      <div class="seccion__interior">
+        <div class="seccion__encabezado">
+          <span class="seccion__kanji" lang="ja" aria-hidden="true">三</span>
+          <span class="seccion__numero">03</span>
+          <h2>Llegada a Mexicali</h2>
+        </div>
+        <div class="dos-columnas">
+          <div>
+            <h3>Motivos de la migración</h3>
+            <p>
+              Mexicali fue fundada en <strong>1903</strong>. Gracias al agua del río Colorado, el valle se convirtió muy pronto
+              en una zona agrícola importante, y empresas como la <b>Colorado River Land Company</b> necesitaban mucha mano
+              de obra. Además, desde <strong>1907-1908</strong> el <i>Acuerdo de Caballeros</i> entre Estados Unidos y Japón
+              limitó la entrada de japoneses a ese país, y muchos se quedaron en la frontera mexicana.
+            </p>
+          </div>
+          <div>
+            <h3>Los primeros establecimientos</h3>
+            <p>
+              Los primeros japoneses del valle trabajaron como jornaleros y después como <b>arrendatarios</b>: rentaban
+              parcelas para sembrar algodón y otros cultivos. Algunos se establecieron en la ciudad y abrieron pequeños
+              comercios. Formaron una comunidad unida que se apoyaba en asociaciones y en la ayuda mutua.
+            </p>
+          </div>
+        </div>
       </div>
-      <figure class="figura">
-        <img src="img/ruta-pacifico.svg" alt="Mapa ilustrado de la ruta de migración desde Japón hasta Chiapas y después hacia Mexicali" width="800" height="450" loading="lazy">
-        <figcaption>Ruta aproximada: de Japón a los puertos del Pacífico mexicano y, desde ahí, hacia el norte.</figcaption>
-      </figure>
-      <h3>Motivos de la migración</h3>
-      <p>
-        Mexicali fue fundada en <strong>1903</strong>. Gracias al agua del río Colorado, el valle se convirtió muy
-        pronto en una zona agrícola importante, y empresas como la <b>Colorado River Land Company</b> necesitaban
-        mucha mano de obra. Además, desde <strong>1907-1908</strong> el llamado <i>Acuerdo de Caballeros</i> entre
-        Estados Unidos y Japón limitó la entrada de japoneses a ese país, por lo que muchos se quedaron en la frontera
-        mexicana.
-      </p>
-      <h3>Rutas de llegada</h3>
-      <p>Los inmigrantes llegaron a Mexicali por varios caminos. Un recorrido típico era:</p>
-      <ol class="lista-pasos">
-        <li>Salida desde un puerto japonés, como Yokohama o Kobe.</li>
-        <li>Travesía del océano Pacífico en barco, de varias semanas.</li>
-        <li>Llegada a puertos mexicanos como Salina Cruz o Manzanillo, o a puertos de Estados Unidos.</li>
-        <li>Trabajo temporal en minas, ferrocarriles o plantaciones del país.</li>
-        <li>Viaje hacia el norte, por Sonora o desde California, hasta el Valle de Mexicali.</li>
-      </ol>
-      <h3>Los primeros establecimientos</h3>
-      <p>
-        Los primeros japoneses del valle trabajaron como jornaleros y después como <b>arrendatarios</b>: rentaban
-        parcelas para sembrar algodón y otros cultivos. Algunos se establecieron en la ciudad y abrieron pequeños
-        comercios. Poco a poco formaron una comunidad unida que se apoyaba en asociaciones y en la ayuda mutua.
-      </p>
     </section>
 
     <hr>
 
-    <!-- 4. Comunidad -->
-    <section class="seccion" id="comunidad">
-      <div class="seccion__encabezado">
-        <span class="seccion__numero">04</span>
-        <h2>Desarrollo de la comunidad japonesa</h2>
+    <!-- 5. Comunidad -->
+    <section class="seccion seccion--arena" id="comunidad">
+      <div class="seccion__interior">
+        <div class="seccion__encabezado">
+          <span class="seccion__kanji" lang="ja" aria-hidden="true">四</span>
+          <span class="seccion__numero">04</span>
+          <h2>Desarrollo de la comunidad japonesa</h2>
+        </div>
+        <div class="dividido">
+          <div>
+            <p>
+              Entre <strong>1910 y 1930</strong> la comunidad japonesa participó en el auge algodonero del valle. Su
+              experiencia en técnicas de cultivo, su disciplina de trabajo y su organización comunitaria les permitieron
+              prosperar. También se dedicaron al comercio, a los servicios y a la producción de hortalizas para la ciudad.
+            </p>
+          </div>
+          <a class="foto m-zoom" href="#cultura" aria-label="Ir a la sección de influencia cultural">
+            <img src="img/comunidad.svg" alt="Calle de Mexicali con una tienda de abarrotes que tiene una cortina noren japonesa" width="800" height="450" loading="lazy">
+          </a>
+        </div>
+
+        <h3>Actividades económicas</h3>
+        <div class="tabla-envoltura">
+          <table class="tabla">
+            <caption>Actividades económicas de los inmigrantes japoneses en Baja California</caption>
+            <thead>
+              <tr>
+                <th scope="col">Actividad</th>
+                <th scope="col">Descripción</th>
+                <th scope="col">Aportación a Mexicali</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="chip chip--verde">Agricultura</span></td><td>Cultivo de algodón como jornaleros y arrendatarios.</td><td>Impulso al principal producto de exportación del valle.</td></tr>
+              <tr><td><span class="chip chip--sol">Horticultura</span></td><td>Siembra de verduras y hortalizas en parcelas pequeñas.</td><td>Abasto de alimentos frescos para la ciudad.</td></tr>
+              <tr><td><span class="chip chip--rojo">Comercio</span></td><td>Tiendas de abarrotes, mercancías y productos importados.</td><td>Crecimiento del comercio local.</td></tr>
+              <tr><td><span class="chip chip--indigo">Servicios</span></td><td>Oficios como barbería, fotografía, sastrería y restaurantes.</td><td>Nuevos servicios para una ciudad en formación.</td></tr>
+              <tr><td><span class="chip chip--mar">Pesca</span></td><td>Pesca y procesamiento de productos del mar en Ensenada.</td><td>Conocimientos técnicos compartidos en la región.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="aviso-historico">
+          <h3>Un momento difícil: la Segunda Guerra Mundial</h3>
+          <p>
+            Tras el ataque a Pearl Harbor en diciembre de <strong>1941</strong>, México rompió relaciones con Japón y, en
+            <strong>1942</strong>, el gobierno ordenó que las familias japonesas de la frontera y las costas se trasladaran al
+            interior del país, principalmente a la Ciudad de México y Guadalajara. Muchas familias de Mexicali tuvieron que
+            dejar sus tierras y negocios. Al terminar la guerra, algunas regresaron y comenzaron de nuevo: un ejemplo de
+            <i>gaman</i>, resistir con paciencia y dignidad.
+          </p>
+        </div>
       </div>
-      <figure class="figura">
-        <img src="img/valle-algodon.svg" alt="Ilustración de campos de algodón en el Valle de Mexicali con la Sierra Cucapá al fondo" width="800" height="450" loading="lazy">
-        <figcaption>El algodón fue el cultivo que impulsó la economía del Valle de Mexicali en las primeras décadas del siglo XX.</figcaption>
-      </figure>
-      <p>
-        Durante las décadas de <strong>1910 a 1930</strong> la comunidad japonesa participó en el auge algodonero del
-        valle. Su experiencia en técnicas de cultivo, su disciplina de trabajo y su organización comunitaria les
-        permitieron prosperar. También se dedicaron al comercio, a los servicios y a la producción de hortalizas para
-        la ciudad.
-      </p>
-      <h3>Actividades económicas</h3>
-      <div class="tabla-envoltura">
-        <table class="tabla">
-          <caption>Actividades económicas de los inmigrantes japoneses en Baja California</caption>
-          <thead>
-            <tr>
-              <th scope="col">Actividad</th>
-              <th scope="col">Descripción</th>
-              <th scope="col">Aportación a Mexicali</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><b>Agricultura</b></td>
-              <td>Cultivo de algodón como jornaleros y arrendatarios.</td>
-              <td>Impulso al principal producto de exportación del valle.</td>
-            </tr>
-            <tr>
-              <td><b>Horticultura</b></td>
-              <td>Siembra de verduras y hortalizas en parcelas pequeñas.</td>
-              <td>Abasto de alimentos frescos para la ciudad.</td>
-            </tr>
-            <tr>
-              <td><b>Comercio</b></td>
-              <td>Tiendas de abarrotes, mercancías y productos importados.</td>
-              <td>Crecimiento del comercio local.</td>
-            </tr>
-            <tr>
-              <td><b>Servicios</b></td>
-              <td>Oficios como barbería, fotografía, sastrería y restaurantes.</td>
-              <td>Nuevos servicios para una ciudad en formación.</td>
-            </tr>
-            <tr>
-              <td><b>Pesca</b> <small>(costa de B.C.)</small></td>
-              <td>Pesca y procesamiento de productos del mar en Ensenada.</td>
-              <td>Conocimientos técnicos compartidos en la región.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <h3>Un momento difícil: la Segunda Guerra Mundial</h3>
-      <p>
-        Tras el ataque a Pearl Harbor en diciembre de <strong>1941</strong>, México rompió relaciones con Japón y, en
-        <strong>1942</strong>, el gobierno ordenó que las familias japonesas que vivían en la frontera y en las costas
-        se trasladaran al interior del país, principalmente a la Ciudad de México y Guadalajara. Muchas familias de
-        Mexicali tuvieron que dejar sus tierras y negocios. Al terminar la guerra, algunas regresaron a Baja California
-        y comenzaron de nuevo, un ejemplo de lo que en japonés se llama <i>gaman</i>: resistir con paciencia y dignidad.
-      </p>
     </section>
 
-    <hr>
-
-    <!-- 5. Influencia cultural -->
+    <!-- 6. Influencia cultural -->
     <section class="seccion" id="cultura">
-      <div class="seccion__encabezado">
-        <span class="seccion__numero">05</span>
-        <h2>Influencia cultural</h2>
-      </div>
-      <figure class="figura">
-        <img src="img/cultura-nikkei.svg" alt="Ilustración de faroles japoneses de papel junto a papel picado mexicano" width="800" height="450" loading="lazy">
-        <figcaption>Dos tradiciones que se encuentran: los faroles <i>chōchin</i> y el papel picado.</figcaption>
-      </figure>
-      <p>
-        La cultura japonesa se mezcló con la mexicana y con la vida fronteriza de Mexicali. Las familias
-        <i>nikkei</i> conservaron valores como el respeto a los mayores, la puntualidad y el trabajo en equipo, y al
-        mismo tiempo adoptaron el idioma, la comida y las fiestas de México.
-      </p>
-      <h3>Aportaciones culturales</h3>
-      <ul class="lista-cultura">
-        <li><b>Gastronomía:</b> el gusto por el arroz, la soya y el <i>sushi</i>, que en el norte de México se
-          transformó en versiones locales con queso crema, chile y empanizado.</li>
-        <li><b>Botanas:</b> los populares <u>cacahuates japoneses</u>, creados en México por el inmigrante
-          Yoshigei Nakatani.</li>
-        <li><b>Festividades:</b> celebraciones como el <i>Obon</i>, dedicado a honrar a los antepasados, y festivales
-          con tambores <i>taiko</i>.</li>
-        <li><b>Artes:</b> el <i>origami</i>, la caligrafía <i>shodō</i> y el arreglo floral <i>ikebana</i>.</li>
-        <li><b>Deportes:</b> la práctica de artes marciales como el <i>judō</i> y el <i>karate</i>.</li>
-        <li><b>Valores:</b> la disciplina, la ayuda mutua y la organización comunitaria.</li>
-      </ul>
-    </section>
-
-    <hr>
-
-    <!-- 6. Actualidad -->
-    <section class="seccion" id="actualidad">
-      <div class="seccion__encabezado">
-        <span class="seccion__numero">06</span>
-        <h2>Actualidad</h2>
-      </div>
-      <p>
-        Hoy en día viven en Mexicali descendientes de tercera y cuarta generación, conocidos como <i>sansei</i> y
-        <i>yonsei</i>. Muchos se identifican plenamente como mexicalenses y participan en todos los ámbitos de la
-        ciudad: la agricultura, el comercio, la medicina, la educación y la cultura.
-      </p>
-      <p>
-        Las organizaciones de la comunidad <i>nikkei</i> en Baja California organizan actividades culturales,
-        clases de idioma japonés y festivales que mantienen viva la memoria de los primeros inmigrantes. Además,
-        la presencia de empresas japonesas en la región fronteriza ha renovado los lazos entre Mexicali y Japón.
-      </p>
-      <h4>¿Cómo se conserva la herencia?</h4>
-      <h5>Memoria familiar</h5>
-      <p class="nota">Fotografías, documentos y relatos que las familias guardan y comparten.</p>
-      <h6>Investigación</h6>
-      <p class="nota">Estudios de universidades como la UABC y de instituciones como El Colegio de México.</p>
-    </section>
-
-    <hr>
-
-    <!-- 7. Línea del tiempo -->
-    <section class="seccion seccion--ancha" id="linea-tiempo">
-      <div class="seccion__encabezado">
-        <span class="seccion__numero">07</span>
-        <h2>Línea del tiempo</h2>
-      </div>
-      <p>Fechas y acontecimientos importantes de la migración japonesa a México y a Mexicali.</p>
-
-      <div class="filtros" role="group" aria-label="Filtrar línea del tiempo">
-        <button type="button" class="filtro" data-filtro="todos" aria-pressed="true">Todos</button>
-        <button type="button" class="filtro" data-filtro="mexico" aria-pressed="false">México</button>
-        <button type="button" class="filtro" data-filtro="mexicali" aria-pressed="false">Mexicali</button>
-      </div>
-
-      <div class="tabla-envoltura">
-        <table class="tabla tabla--tiempo" id="tabla-tiempo">
-          <caption>Línea del tiempo de la migración japonesa</caption>
-          <thead>
-            <tr>
-              <th scope="col">Año</th>
-              <th scope="col">Acontecimiento</th>
-              <th scope="col">Lugar</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr data-ambito="mexico">
-              <td><strong>1868</strong></td>
-              <td>Inicia la era Meiji y la modernización de Japón.</td>
-              <td>Japón</td>
-            </tr>
-            <tr data-ambito="mexico">
-              <td><strong>1888</strong></td>
-              <td>Se firma el Tratado de Amistad, Comercio y Navegación.</td>
-              <td>México y Japón</td>
-            </tr>
-            <tr data-ambito="mexico">
-              <td><strong>1897</strong></td>
-              <td>Llega la Colonia Enomoto.</td>
-              <td>Chiapas</td>
-            </tr>
-            <tr data-ambito="mexico">
-              <td><strong>1900–1910</strong></td>
-              <td>Llegan miles de trabajadores por contrato.</td>
-              <td>Coahuila, Sonora, Veracruz</td>
-            </tr>
-            <tr data-ambito="mexicali">
-              <td><strong>1903</strong></td>
-              <td>Se funda la ciudad de Mexicali.</td>
-              <td>Baja California</td>
-            </tr>
-            <tr data-ambito="mexicali">
-              <td><strong>1907–1908</strong></td>
-              <td>El Acuerdo de Caballeros limita la entrada a EE. UU.; muchos se quedan en la frontera.</td>
-              <td>Frontera norte</td>
-            </tr>
-            <tr data-ambito="mexicali">
-              <td><strong>1910–1930</strong></td>
-              <td>Auge algodonero y crecimiento de la comunidad japonesa.</td>
-              <td>Valle de Mexicali</td>
-            </tr>
-            <tr data-ambito="mexicali">
-              <td><strong>1942</strong></td>
-              <td>Traslado forzoso de familias japonesas al interior del país.</td>
-              <td>Mexicali → CDMX, Guadalajara</td>
-            </tr>
-            <tr data-ambito="mexicali">
-              <td><strong>1945 en adelante</strong></td>
-              <td>Algunas familias regresan y reconstruyen su vida.</td>
-              <td>Baja California</td>
-            </tr>
-            <tr data-ambito="mexico">
-              <td><strong>Hoy</strong></td>
-              <td>Las nuevas generaciones <i>nikkei</i> conservan su herencia.</td>
-              <td>Todo México</td>
-            </tr>
-          </tbody>
-          <tfoot>
-            <tr>
-              <td colspan="3">Fuentes: ver la sección de <a href="#referencias">referencias</a>.</td>
-            </tr>
-          </tfoot>
-        </table>
-      </div>
-    </section>
-
-    <hr>
-
-    <!-- 8. Conclusión -->
-    <section class="seccion" id="conclusion">
-      <div class="seccion__encabezado">
-        <span class="seccion__numero">08</span>
-        <h2>Conclusión</h2>
-      </div>
-      <p>
-        La migración japonesa es parte de la <b>identidad histórica y cultural de Mexicali</b>. Los inmigrantes
-        llegaron buscando una vida mejor y, a pesar de las dificultades, como el trabajo duro en el desierto o el
-        traslado forzoso durante la guerra, contribuyeron al desarrollo agrícola y comercial del valle.
-      </p>
-      <p>
-        Conocer esta historia nos ayuda a entender que Mexicali es una ciudad construida por muchas culturas.
-        <u>Valorar la herencia japonesa</u> también es valorar la diversidad que hace única a nuestra frontera.
-      </p>
-    </section>
-
-    <hr>
-
-    <!-- 9. Formulario -->
-    <section class="seccion" id="formulario">
-      <div class="seccion__encabezado">
-        <span class="seccion__numero">09</span>
-        <h2>Formulario: comparte tu historia</h2>
-      </div>
-      <p>¿Tu familia tiene relación con la comunidad japonesa de Mexicali? ¿Te gustó esta página? Déjanos tus comentarios.</p>
-
-      <form class="formulario" id="form-comentarios" action="#" method="post" novalidate>
-        <div class="campo">
-          <label for="nombre">Nombre completo</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Tanaka López" required autocomplete="name">
-          <span class="campo__error" id="error-nombre"></span>
+      <div class="seccion__interior">
+        <div class="seccion__encabezado">
+          <span class="seccion__kanji" lang="ja" aria-hidden="true">五</span>
+          <span class="seccion__numero">05</span>
+          <h2>Influencia cultural</h2>
         </div>
-
-        <div class="campo">
-          <label for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="correo" placeholder="nombre@ejemplo.com" required autocomplete="email">
-          <span class="campo__error" id="error-correo"></span>
-        </div>
-
-        <div class="campo">
-          <label for="seccion-favorita">Sección favorita</label>
-          <select id="seccion-favorita" name="seccion-favorita">
-            <option value="antecedentes">Antecedentes históricos</option>
-            <option value="llegada">Llegada a Mexicali</option>
-            <option value="comunidad">Desarrollo de la comunidad</option>
-            <option value="cultura" selected>Influencia cultural</option>
-            <option value="actualidad">Actualidad</option>
-          </select>
-        </div>
-
-        <fieldset class="campo">
-          <legend>¿Tienes ascendencia japonesa?</legend>
-          <div class="opciones">
-            <label class="opcion"><input type="radio" name="ascendencia" value="si"> Sí</label>
-            <label class="opcion"><input type="radio" name="ascendencia" value="no" checked> No</label>
-            <label class="opcion"><input type="radio" name="ascendencia" value="nose"> No lo sé</label>
+        <div class="dividido dividido--invertido">
+          <div class="foto foto--quieta">
+            <img src="img/cultura-nikkei.svg" alt="Faroles japoneses de papel junto a papel picado mexicano" width="800" height="450" loading="lazy">
           </div>
-        </fieldset>
-
-        <fieldset class="campo">
-          <legend>Temas que te interesan</legend>
-          <div class="opciones">
-            <label class="opcion"><input type="checkbox" name="temas" value="gastronomia"> Gastronomía</label>
-            <label class="opcion"><input type="checkbox" name="temas" value="historia"> Historia</label>
-            <label class="opcion"><input type="checkbox" name="temas" value="tradiciones"> Tradiciones</label>
-          </div>
-        </fieldset>
-
-        <div class="campo">
-          <label for="mensaje">Comentario o historia familiar</label>
-          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí…" required></textarea>
-          <span class="campo__error" id="error-mensaje"></span>
+          <p>
+            La cultura japonesa se mezcló con la mexicana y con la vida fronteriza de Mexicali. Las familias <i>nikkei</i>
+            conservaron valores como el respeto a los mayores, la puntualidad y el trabajo en equipo, y al mismo tiempo
+            adoptaron el idioma, la comida y las fiestas de México.
+          </p>
         </div>
-
-        <div class="formulario__botones">
-          <button type="submit" class="boton boton--primario">Enviar comentario</button>
-          <button type="reset" class="boton boton--secundario">Limpiar</button>
-        </div>
-      </form>
+        <h3>Aportaciones culturales</h3>
+        <ul class="aportes">
+          <li class="aporte aporte--rojo"><span class="aporte__icono" lang="ja" aria-hidden="true">食</span><b>Gastronomía</b> El arroz, la soya y el <i>sushi</i>, que en el norte se volvió local: con queso crema, chile y empanizado.</li>
+          <li class="aporte aporte--sol"><span class="aporte__icono" lang="ja" aria-hidden="true">豆</span><b>Botanas</b> Los <u>cacahuates japoneses</u>, creados en México por el inmigrante Yoshigei Nakatani.</li>
+          <li class="aporte aporte--indigo"><span class="aporte__icono" lang="ja" aria-hidden="true">祭</span><b>Festividades</b> El <i>Obon</i>, para honrar a los antepasados, y los tambores <i>taiko</i>.</li>
+          <li class="aporte aporte--verde"><span class="aporte__icono" lang="ja" aria-hidden="true">紙</span><b>Artes</b> El <i>origami</i>, la caligrafía <i>shodō</i> y el arreglo floral <i>ikebana</i>.</li>
+          <li class="aporte aporte--mar"><span class="aporte__icono" lang="ja" aria-hidden="true">道</span><b>Deportes</b> Artes marciales como el <i>judō</i> y el <i>karate</i>.</li>
+          <li class="aporte aporte--arena"><span class="aporte__icono" lang="ja" aria-hidden="true">和</span><b>Valores</b> La disciplina, la ayuda mutua y la organización comunitaria.</li>
+        </ul>
+      </div>
     </section>
 
     <hr>
 
-    <!-- 10. Referencias -->
+    <!-- 7. Actualidad -->
+    <section class="seccion seccion--papel" id="actualidad">
+      <div class="seccion__interior">
+        <div class="seccion__encabezado">
+          <span class="seccion__kanji" lang="ja" aria-hidden="true">六</span>
+          <span class="seccion__numero">06</span>
+          <h2>Actualidad</h2>
+        </div>
+        <div class="dos-columnas">
+          <div>
+            <p>
+              Hoy viven en Mexicali descendientes de tercera y cuarta generación, los <i>sansei</i> y <i>yonsei</i>. Muchos se
+              identifican plenamente como mexicalenses y participan en la agricultura, el comercio, la medicina, la educación
+              y la cultura de la ciudad.
+            </p>
+            <p>
+              Las organizaciones de la comunidad <i>nikkei</i> en Baja California organizan actividades culturales, clases de
+              idioma japonés y festivales que mantienen viva la memoria de los primeros inmigrantes. La presencia de empresas
+              japonesas en la frontera ha renovado los lazos entre Mexicali y Japón.
+            </p>
+          </div>
+          <div class="conserva">
+            <h4>¿Cómo se conserva la herencia?</h4>
+            <h5>Memoria familiar</h5>
+            <p class="nota">Fotografías, documentos y relatos que las familias guardan y comparten.</p>
+            <h6>Investigación</h6>
+            <p class="nota">Estudios de universidades como la UABC y de instituciones como El Colegio de México.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Línea del tiempo -->
+    <section class="seccion seccion--indigo" id="linea-tiempo">
+      <div class="seccion__interior seccion__interior--ancho">
+        <div class="seccion__encabezado">
+          <span class="seccion__kanji" lang="ja" aria-hidden="true">七</span>
+          <span class="seccion__numero">07</span>
+          <h2>Línea del tiempo</h2>
+        </div>
+        <p>Fechas y acontecimientos importantes de la migración japonesa a México y a Mexicali.</p>
+
+        <div class="filtros" role="group" aria-label="Filtrar línea del tiempo">
+          <span class="filtros__pastilla" aria-hidden="true"></span>
+          <button type="button" class="filtro" data-filtro="todos" aria-pressed="true">Todos</button>
+          <button type="button" class="filtro" data-filtro="mexico" aria-pressed="false">México</button>
+          <button type="button" class="filtro" data-filtro="mexicali" aria-pressed="false">Mexicali</button>
+        </div>
+
+        <div class="tabla-envoltura">
+          <table class="tabla tabla--tiempo" id="tabla-tiempo">
+            <caption>Línea del tiempo de la migración japonesa</caption>
+            <thead>
+              <tr>
+                <th scope="col">Año</th>
+                <th scope="col">Acontecimiento</th>
+                <th scope="col">Lugar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-ambito="mexico"><td><strong>1868</strong></td><td>Inicia la era Meiji y la modernización de Japón.</td><td>Japón</td></tr>
+              <tr data-ambito="mexico"><td><strong>1888</strong></td><td>Se firma el Tratado de Amistad, Comercio y Navegación.</td><td>México y Japón</td></tr>
+              <tr data-ambito="mexico"><td><strong>1897</strong></td><td>Llega la Colonia Enomoto.</td><td>Chiapas</td></tr>
+              <tr data-ambito="mexico"><td><strong>1900–1910</strong></td><td>Llegan miles de trabajadores por contrato.</td><td>Coahuila, Sonora, Veracruz</td></tr>
+              <tr data-ambito="mexicali"><td><strong>1903</strong></td><td>Se funda la ciudad de Mexicali.</td><td>Baja California</td></tr>
+              <tr data-ambito="mexicali"><td><strong>1907–1908</strong></td><td>El Acuerdo de Caballeros limita la entrada a EE. UU.; muchos se quedan en la frontera.</td><td>Frontera norte</td></tr>
+              <tr data-ambito="mexicali"><td><strong>1910–1930</strong></td><td>Auge algodonero y crecimiento de la comunidad japonesa.</td><td>Valle de Mexicali</td></tr>
+              <tr data-ambito="mexicali"><td><strong>1942</strong></td><td>Traslado forzoso de familias japonesas al interior del país.</td><td>Mexicali → CDMX, Guadalajara</td></tr>
+              <tr data-ambito="mexicali"><td><strong>1945 en adelante</strong></td><td>Algunas familias regresan y reconstruyen su vida.</td><td>Baja California</td></tr>
+              <tr data-ambito="mexico"><td><strong>Hoy</strong></td><td>Las nuevas generaciones <i>nikkei</i> conservan su herencia.</td><td>Todo México</td></tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="3">Fuentes: ver la sección de <a href="#referencias">referencias</a>.</td></tr>
+            </tfoot>
+          </table>
+        </div>
+        <p class="leyenda"><span>México y Japón</span><span>Mexicali y la frontera</span></p>
+      </div>
+    </section>
+
+    <!-- 9. Conclusión: momento "word-highlight" -->
+    <section class="seccion seccion--conclusion" id="conclusion" data-moment="word-highlight">
+      <div class="seccion__interior seccion__interior--ancho">
+        <div class="seccion__encabezado">
+          <span class="seccion__kanji" lang="ja" aria-hidden="true">八</span>
+          <span class="seccion__numero">08</span>
+          <h2>Conclusión</h2>
+        </div>
+        <p class="mo-wh__text">
+          Los inmigrantes japoneses llegaron buscando una vida mejor y, a pesar del desierto y del traslado forzoso de 1942,
+          ayudaron a levantar el valle. Su historia es parte de la <strong>identidad de Mexicali</strong>, una ciudad construida
+          por muchas culturas.
+        </p>
+        <p class="conclusion__cierre">
+          Conocer esta historia nos ayuda a entender la frontera. <u>Valorar la herencia japonesa</u> también es valorar la
+          diversidad que hace única a nuestra ciudad.
+        </p>
+      </div>
+    </section>
+
+    <!-- 10. Formulario -->
+    <section class="seccion seccion--arena" id="formulario">
+      <div class="seccion__interior">
+        <div class="seccion__encabezado">
+          <span class="seccion__kanji" lang="ja" aria-hidden="true">九</span>
+          <span class="seccion__numero">09</span>
+          <h2>Formulario: comparte tu historia</h2>
+        </div>
+        <p>¿Tu familia tiene relación con la comunidad japonesa de Mexicali? ¿Te gustó esta página? Déjanos tus comentarios.</p>
+
+        <form class="formulario" id="form-comentarios" action="#" method="post" novalidate>
+          <div class="formulario__fila">
+            <div class="campo">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana Tanaka López" required autocomplete="name" aria-describedby="error-nombre">
+              <span class="campo__error" id="error-nombre"></span>
+            </div>
+            <div class="campo">
+              <label for="correo">Correo electrónico</label>
+              <input type="email" id="correo" name="correo" placeholder="nombre@ejemplo.com" required autocomplete="email" aria-describedby="error-correo">
+              <span class="campo__error" id="error-correo"></span>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="seccion-favorita">Sección favorita</label>
+            <select id="seccion-favorita" name="seccion-favorita">
+              <option value="antecedentes">Antecedentes históricos</option>
+              <option value="viaje">El viaje</option>
+              <option value="comunidad">Desarrollo de la comunidad</option>
+              <option value="cultura" selected>Influencia cultural</option>
+              <option value="actualidad">Actualidad</option>
+            </select>
+          </div>
+
+          <fieldset class="campo">
+            <legend>¿Tienes ascendencia japonesa?</legend>
+            <div class="opciones">
+              <label class="opcion"><input type="radio" name="ascendencia" value="si"> Sí</label>
+              <label class="opcion"><input type="radio" name="ascendencia" value="no" checked> No</label>
+              <label class="opcion"><input type="radio" name="ascendencia" value="nose"> No lo sé</label>
+            </div>
+          </fieldset>
+
+          <fieldset class="campo">
+            <legend>Temas que te interesan</legend>
+            <div class="opciones">
+              <label class="opcion"><input type="checkbox" name="temas" value="gastronomia"> Gastronomía</label>
+              <label class="opcion"><input type="checkbox" name="temas" value="historia"> Historia</label>
+              <label class="opcion"><input type="checkbox" name="temas" value="tradiciones"> Tradiciones</label>
+            </div>
+          </fieldset>
+
+          <div class="campo">
+            <label for="mensaje">Comentario o historia familiar</label>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe aquí…" required aria-describedby="error-mensaje"></textarea>
+            <span class="campo__error" id="error-mensaje"></span>
+          </div>
+
+          <div class="formulario__botones">
+            <button type="submit" class="boton boton--primario">Enviar comentario</button>
+            <button type="reset" class="boton boton--secundario">Limpiar formulario</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- 11. Referencias -->
     <section class="seccion" id="referencias">
-      <div class="seccion__encabezado">
-        <span class="seccion__numero">10</span>
-        <h2>Referencias bibliográficas</h2>
+      <div class="seccion__interior">
+        <div class="seccion__encabezado">
+          <span class="seccion__kanji" lang="ja" aria-hidden="true">十</span>
+          <span class="seccion__numero">10</span>
+          <h2>Referencias bibliográficas</h2>
+        </div>
+        <div class="dos-columnas">
+          <div>
+            <h3>Libros</h3>
+            <ul class="referencias">
+              <li>Ota Mishima, M. E. (1982). <i>Siete migraciones japonesas en México, 1890-1978</i>. El Colegio de México.</li>
+              <li>Hernández Galindo, S. (2011). <i>La guerra contra los japoneses en México durante la Segunda Guerra Mundial</i>. Itaca.</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Sitios web</h3>
+            <ul class="referencias">
+              <li><a class="enlace" href="https://es.wikipedia.org/wiki/Inmigraci%C3%B3n_japonesa_en_M%C3%A9xico" target="_blank" rel="noopener noreferrer">Inmigración japonesa en México</a> — Wikipedia.</li>
+              <li><a class="enlace" href="https://www.discovernikkei.org/es/" target="_blank" rel="noopener noreferrer">Descubra a los Nikkei</a> — Japanese American National Museum.</li>
+              <li><a class="enlace" href="https://www.mx.emb-japan.go.jp/" target="_blank" rel="noopener noreferrer">Embajada del Japón en México</a>.</li>
+              <li><a class="enlace" href="https://www.inah.gob.mx/" target="_blank" rel="noopener noreferrer">Instituto Nacional de Antropología e Historia (INAH)</a>.</li>
+              <li><a class="enlace" href="https://www.uabc.mx/" target="_blank" rel="noopener noreferrer">Universidad Autónoma de Baja California (UABC)</a>.</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <h3>Libros</h3>
-      <ul class="referencias">
-        <li>Ota Mishima, M. E. (1982). <i>Siete migraciones japonesas en México, 1890-1978</i>. El Colegio de México.</li>
-        <li>Hernández Galindo, S. (2011). <i>La guerra contra los japoneses en México durante la Segunda Guerra Mundial</i>. Itaca.</li>
-      </ul>
-      <h3>Sitios web (enlaces externos)</h3>
-      <ul class="referencias">
-        <li><a href="https://es.wikipedia.org/wiki/Inmigraci%C3%B3n_japonesa_en_M%C3%A9xico" target="_blank" rel="noopener noreferrer">Inmigración japonesa en México</a> — Wikipedia.</li>
-        <li><a href="https://www.discovernikkei.org/es/" target="_blank" rel="noopener noreferrer">Descubra a los Nikkei</a> — Japanese American National Museum.</li>
-        <li><a href="https://www.mx.emb-japan.go.jp/" target="_blank" rel="noopener noreferrer">Embajada del Japón en México</a> — relación bilateral México–Japón.</li>
-        <li><a href="https://www.inah.gob.mx/" target="_blank" rel="noopener noreferrer">Instituto Nacional de Antropología e Historia (INAH)</a>.</li>
-        <li><a href="https://www.uabc.mx/" target="_blank" rel="noopener noreferrer">Universidad Autónoma de Baja California (UABC)</a>.</li>
-      </ul>
     </section>
 
   </main>
 
   <footer class="pie">
-    <p>Meta 4.3 · HTML 2 · Universidad Autónoma de Baja California<br>
-    Proyecto escolar sobre la historia de la migración japonesa a Mexicali.</p>
-    <a class="boton boton--secundario boton--chico" href="#inicio">↑ Volver arriba</a>
+    <div class="pie__interior">
+      <p class="pie__marca"><span lang="ja">日墨</span> Japón · México</p>
+      <p>Meta 4.3 · HTML 2 · Universidad Autónoma de Baja California<br>
+      Ilustraciones originales del proyecto. Animaciones con <a class="enlace" href="https://github.com/emilkowalski/skills" target="_blank" rel="noopener noreferrer">emilkowalski/skills</a> y <a class="enlace" href="https://github.com/Leonxlnx/taste-skill" target="_blank" rel="noopener noreferrer">taste-skill</a>.</p>
+      <a class="boton boton--secundario boton--chico" href="#inicio">↑ Volver arriba</a>
+    </div>
   </footer>
 
-  <!-- Contenedor de notificaciones (toast) -->
   <div class="avisos" id="avisos" aria-live="polite"></div>
 
   <script src="js/main.js"></script>
+  <script src="assets/moments/momentos.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@
 <path d="M60 68 h70 l-6 50 l-10 -8 l-10 10 l-10 -10 l-10 10 l-10 -10 l-8 8z" fill="#e8577e"/>
 <path d="M210 92 h70 l-6 50 l-10 -8 l-10 10 l-10 -10 l-10 10 l-10 -10 l-8 8z" fill="#f2b33d"/>
 <path d="M520 92 h70 l-6 50 l-10 -8 l-10 10 l-10 -10 l-10 10 l-10 -10 l-8 8z" fill="#4fb3a5"/>
-<path d="M670 68 h70 l-6 50 l-10 -8 l-10 10 l-10 -10 l-10 10 l-10 -10 l-8 8z" fill="#8f6ad1"/>
+<path d="M670 68 h70 l-6 50 l-10 -8 l-10 10 l-10 -10 l-10 10 l-10 -10 l-8 8z" fill="#3f7fc0"/>
 </g>
 <g fill="#2b2230"><circle cx="95" cy="88" r="7"/><circle cx="245" cy="112" r="7"/><circle cx="555" cy="112" r="7"/><circle cx="705" cy="88" r="7"/></g>
 <g transform="translate(400 112)">
@@ -22,6 +22,4 @@
 </g>
 <g transform="translate(160 250)"><path d="M-40 0 C -40 -60, 40 -60, 40 0 C 40 60, -40 60, -40 0z" fill="#f2c94c"/><g stroke="#b5881f" stroke-width="2"><line x1="-36" y1="-18" x2="36" y2="-18"/><line x1="-40" y1="0" x2="40" y2="0"/><line x1="-36" y1="18" x2="36" y2="18"/></g><rect x="-18" y="-50" width="36" height="7" fill="#1d171f"/><rect x="-18" y="43" width="36" height="7" fill="#1d171f"/></g>
 <g transform="translate(640 250)"><path d="M-40 0 C -40 -60, 40 -60, 40 0 C 40 60, -40 60, -40 0z" fill="#f28b3d"/><g stroke="#b8571a" stroke-width="2"><line x1="-36" y1="-18" x2="36" y2="-18"/><line x1="-40" y1="0" x2="40" y2="0"/><line x1="-36" y1="18" x2="36" y2="18"/></g><rect x="-18" y="-50" width="36" height="7" fill="#1d171f"/><rect x="-18" y="43" width="36" height="7" fill="#1d171f"/></g>
-<text x="400" y="360" text-anchor="middle" font-family="Georgia, serif" font-size="28" fill="#f3e9d8">Faroles y papel picado</text>
-<text x="400" y="392" text-anchor="middle" font-family="Georgia, serif" font-size="16" fill="#cbbba3" font-style="italic">La herencia nikkei en la vida de Mexicali</text>
 </svg>

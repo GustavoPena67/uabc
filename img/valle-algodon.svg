@@ -16,6 +16,4 @@
 <circle cx="30" cy="396" r="8"/><circle cx="130" cy="398" r="7"/><circle cx="230" cy="395" r="8"/><circle cx="330" cy="397" r="7"/><circle cx="430" cy="394" r="8"/><circle cx="530" cy="396" r="7"/><circle cx="630" cy="393" r="8"/><circle cx="740" cy="395" r="7"/>
 <circle cx="80" cy="431" r="9"/><circle cx="200" cy="433" r="8"/><circle cx="320" cy="430" r="9"/><circle cx="440" cy="432" r="8"/><circle cx="560" cy="429" r="9"/><circle cx="680" cy="431" r="8"/></g>
 <g transform="translate(300 300)" fill="#2a2420"><circle cx="0" cy="-30" r="8"/><path d="M-18 -26 h36 l-18 -12z" fill="#c9a35e"/><rect x="-7" y="-22" width="14" height="30" rx="4"/><rect x="-6" y="8" width="4" height="20"/><rect x="2" y="8" width="4" height="20"/><path d="M6 -10 l22 18 l-4 4 l-20 -14z" fill="#e8e1d0"/></g>
-<text x="20" y="40" font-family="Georgia, serif" font-size="22" font-weight="bold" fill="#2a2420">Valle de Mexicali</text>
-<text x="20" y="64" font-family="Georgia, serif" font-size="15" fill="#2a2420">Algodón y canales de riego del río Colorado</text>
 </svg>

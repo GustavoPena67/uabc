@@ -1,51 +1,60 @@
-// Interacciones de la página: aparición al hacer scroll, índice activo,
+// Interacciones de la página: índice activo,
 // filtros de la línea del tiempo, validación del formulario y avisos (toast).
 
 (function () {
   "use strict";
 
-  // 1) Aparición suave de cada sección al entrar en pantalla (una sola vez)
-  var secciones = document.querySelectorAll(".seccion");
+  // 1) Marca en el índice la sección que se está leyendo
+  var secciones = document.querySelectorAll("main > section[id]");
+  var enlaces = document.querySelectorAll(".indice__lista a");
   if ("IntersectionObserver" in window) {
-    secciones.forEach(function (s) { s.classList.add("revelar"); });
-    var obsRevelar = new IntersectionObserver(function (entradas) {
-      entradas.forEach(function (e) {
-        if (e.isIntersecting) {
-          e.target.classList.add("visible");
-          obsRevelar.unobserve(e.target);
-        }
-      });
-    }, { rootMargin: "0px 0px -10% 0px" });
-    secciones.forEach(function (s) { obsRevelar.observe(s); });
-
-    // 2) Marca en el índice la sección que se está leyendo
-    var enlaces = document.querySelectorAll(".indice__lista a");
     var obsIndice = new IntersectionObserver(function (entradas) {
       entradas.forEach(function (e) {
         if (!e.isIntersecting) return;
         enlaces.forEach(function (a) {
           var activo = a.getAttribute("href") === "#" + e.target.id;
           a.setAttribute("aria-current", activo ? "true" : "false");
-          if (activo) a.scrollIntoView({ block: "nearest", inline: "nearest" });
+          if (activo && a.parentElement.parentElement.scrollWidth > a.parentElement.parentElement.clientWidth) {
+            var lista = a.parentElement.parentElement;
+            lista.scrollTo({ left: a.offsetLeft - lista.clientWidth / 2 + a.offsetWidth / 2, behavior: "smooth" });
+          }
         });
       });
-    }, { rootMargin: "-40% 0px -55% 0px" });
+    }, { rootMargin: "-45% 0px -50% 0px" });
     secciones.forEach(function (s) { obsIndice.observe(s); });
   }
 
-  // 3) Filtros de la línea del tiempo
+  // 2) Filtros de la línea del tiempo: una pastilla se desliza al botón elegido
+  //    y las filas que no aplican se atenúan (la tabla no cambia de alto).
   var filtros = document.querySelectorAll(".filtro");
+  var pastilla = document.querySelector(".filtros__pastilla");
   var filas = document.querySelectorAll("#tabla-tiempo tbody tr");
+  function moverPastilla(boton) {
+    if (!pastilla) return;
+    pastilla.style.width = boton.offsetWidth + "px";
+    pastilla.style.transform = "translateX(" + boton.offsetLeft + "px)";
+  }
   filtros.forEach(function (boton) {
     boton.addEventListener("click", function () {
       var valor = boton.dataset.filtro;
       filtros.forEach(function (b) { b.setAttribute("aria-pressed", String(b === boton)); });
+      moverPastilla(boton);
       filas.forEach(function (fila) {
         var mostrar = valor === "todos" || fila.dataset.ambito === valor;
-        fila.classList.toggle("oculta", !mostrar);
+        fila.classList.toggle("atenuada", !mostrar);
       });
     });
   });
+  function pastillaInicial() {
+    var activo = document.querySelector('.filtro[aria-pressed="true"]');
+    if (!activo || !pastilla) return;
+    var t = pastilla.style.transition; pastilla.style.transition = "none";
+    moverPastilla(activo);
+    pastilla.offsetWidth; pastilla.style.transition = t;
+  }
+  pastillaInicial();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(pastillaInicial);
+  window.addEventListener("resize", pastillaInicial);
 
   // 4) Avisos tipo toast
   var contenedor = document.getElementById("avisos");
